@@ -1,4 +1,4 @@
-# Learn with Pluralsight: [What's new in Java 13][url.course]
+# Learn With Pluralsight: [What's new in Java 13][url.course]
 
 1. Course Overview [[GITHUB][branch.gh.main]]
 2. Java 13 API Updates [[NOTE](2-Java13APIUpdates.note.md)]]
