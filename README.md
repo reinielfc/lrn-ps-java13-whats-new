@@ -10,4 +10,4 @@
 - [5 Java Enhancement Proposals](https://openjdk.java.net/projects/jdk/13)
 
 [url.course]: https://app.pluralsight.com/library/courses/whats-new-in-java-13
-[branch.gh.main]: https://github.com/reinielfc/lrn-ps-java13-whats-new
+[branch.gh.main]: https://github.com/reinielfc/lrn-ps-java13-whats-new/tree/main
