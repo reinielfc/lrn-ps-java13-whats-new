@@ -1,7 +1,7 @@
 # Learn With Pluralsight: [What's new in Java 13][url.course]
 
 1. Course Overview [[GITHUB][branch.gh.main]]
-2. Java 13 API Updates [[NOTE](2-Java13APIUpdates.note.md)]]
+2. Java 13 API Updates [[NOTE](2-Java13APIUpdates.note.md)]
 3. Preview Feature: Text Blocks [[NOTE](3-PreviewFeature-TextBlocks.note.md)]
 4. Platform Changes [[NOTE](4-PlatformChanges.note.md)]
 
