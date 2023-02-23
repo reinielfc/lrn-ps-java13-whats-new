@@ -1,0 +1,29 @@
+# 4. Platform Changes
+
+- reimplementation of Socket API
+  - `java.net.Socket` - client API for opening socket connections
+  - `java.net.ServerSocket` - server API for accepting socket connections
+  - more modern and maintainable implementation
+  - not using stack as I/O buffer
+  - ready for new Java concurrency models (project Loom)
+  - recognized by `sun.nio.ch.NioSocketImpl`
+  - reuses NIO native code
+  - built using `java.concurrent.lock` constructs
+  - aims to be compatible w/ previous implementation
+  - `-Djdk.net.usePlainSocketImpl` to use old implementation (will be removed in the future)
+  - performs better
+- dynamic AppCDSArchives
+  - class data sharing
+    - can be used to improve JVM startup times by reducing class load time
+    - shares class metadata with multiple JVMs (read-only)
+  - in Java 13 the process to make this possible is made less cumbersome with a single command
+    - `java -XX:ArchiveClassesAtExit=hello.jsa -cp Hello.jar Hello`
+    - only created if the app exits cleanly
+    - run same app using the `SharedArchiveFile`
+      - `java -XX:SharedArchiveFile=hello.jsa -cp Hello.jar Hello`
+  - deprecation: disable class verification
+    - deprecated flags: `-Xverify:none` `-noverify`
+      - disables the checking of bytecode when loading classes
+      - used to improve startup time by skipping the verification step
+      - deprecated as a security measure because it allows unsafe bytecode to be loaded into the JVM
+    - from now on, use AppCDS instead of upfront verification for faster startup times
